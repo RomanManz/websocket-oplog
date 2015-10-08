@@ -1,0 +1,73 @@
+header {
+	height: 50px;
+	text-align: center;
+	background-color: black;
+	color: white;
+	font-size: 1.5em;
+}
+
+header > span {
+	vertical-align: -webkit-baseline-middle;
+	vertical-align: -moz-middle-with-baseline;
+	display: inline-block;
+}
+
+body {
+ height: 100vh;
+}
+
+#view {
+ height: calc(100vh - 50px);
+}
+
+caption {
+ text-align: left;
+}
+
+#items > table > tbody > tr:nth-of-type(odd) {
+ background: #9999FF;
+}
+
+.item_btn {
+ color: white;
+ text-align: center;
+}
+
+.th_right {
+ text-align: right;
+}
+
+input.ng-invalid.ng-touched {
+ background-color: #FA787E;
+}
+
+input.ng-valid.ng-touched {
+ background-color: #78FA89;
+}
+
+#add_item_div {
+ border: 5px solid grey;
+ -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ border-radius: 10px;
+ position: absolute;
+ z-index: 10;
+ top: 0;
+ right: 50px;
+ padding: 10px;
+ background-color: #CC99FF;
+}
+
+#add_item_div button {
+ margin-right: 5px;
+}
+
+#eventstop {
+ height: 100%;
+}
+
+#events {
+ overflow-y: auto;
+ overflow-x: hidden;
+ height: calc(100vh - 110px);
+}

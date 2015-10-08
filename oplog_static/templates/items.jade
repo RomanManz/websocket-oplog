@@ -1,0 +1,53 @@
+div.col-md-2.col-xs-0
+div#items.col-md-6.col-xs-12
+ div#add_item_div.col-md-4.col-xs-8(ng-show="flags.new_item")
+  form(novalidate name="new_item_form")
+   div.form-group
+    label(for="name_input")
+     |Name
+    // input.form-control(type="text" id="name_input" placeholder="Name" required ng-model="data.name" ng-model-options="{ updateOn: 'blur' }")
+    input.form-control(type="text" id="name_input" placeholder="Name" required ng-model="data.name")
+   div.form-group
+    label(for="extra_input")
+     |Extra
+    // input.form-control(type="text" id="extra_input" placeholder="Extra" required ng-model="data.extra" ng-model-options="{ updateOn: 'blur' }")
+    input.form-control(type="text" id="extra_input" placeholder="Extra" required ng-model="data.extra")
+   // button.btn-sm.btn.btn-success.item_btn(ng-submit="add_item()" disabled="! new_item_form.$valid")
+   button.btn-sm.btn.btn-success.item_btn(ng-submit="add_item()" ng-click="add_item()" ng-disabled="new_item_form.$invalid")
+    span.glyphicon.glyphicon-ok-sign
+   button.btn-sm.btn.btn-default.item_btn(ng-click="flags.new_item = false")
+    span.glyphicon.glyphicon-remove-sign
+ table.table
+  caption
+   |Items list
+  thead
+   tr
+    th
+     |Name
+    th
+     |Extra
+    th.th_right
+     button.btn-xs.btn.btn-success.item_btn(ng-click="flags.new_item = true")
+      span.glyphicon.glyphicon-plus-sign
+  tbody
+   tr(ng-repeat="item in items | orderBy:'name'")
+    td(contenteditable="true" td-mon="name")
+     |{{item.name}}
+    td(contenteditable="true" td-mon="extra")
+     |{{item.extra}}
+    td.th_right
+     button.btn-xs.btn.btn-error.item_btn(ng-click="delete_item(item)")
+      span.glyphicon.glyphicon-trash
+div#eventstop.col-md-4.col-xs-0
+ h3
+  |Events
+ div#events
+  div(ng-repeat="event in events")
+   |Type: {{event.op}}
+   br
+   |Id: {{event.doc._id}}
+   br
+   |Name: {{event.doc.name}}
+   br
+   |Extra: {{event.doc.extra}}
+   hr

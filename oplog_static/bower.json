@@ -1,0 +1,18 @@
+{
+  "name": "websocket-oplog",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-resource": "~1.4.7",
+    "angular-route": "~1.4.7",
+    "angular-websocket": "~1.0.14",
+    "angular": "~1.4.7",
+    "bootstrap": "~3.0.2",
+    "modernizr": "~2.6.2"
+  }
+}

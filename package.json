@@ -1,0 +1,28 @@
+{
+  "name": "websocket-oplog",
+  "version": "0.0.1",
+  "description": "A sample Express application to push MongoDB oplog events via Websockets to an Angular page.",
+  "main": "oplog.js",
+  "scripts": {
+    "start": "node --harmony oplog",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mean",
+    "nodejs",
+    "express",
+    "angular",
+    "mongodb",
+    "oplog",
+    "websockets"
+  ],
+  "author": "Roman Manz",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "3.8.23",
+    "co": "^4.5.1",
+    "express": ">=4.0.0",
+    "body-parser": "~1.5.0",
+    "express-ws": "^1.0.0-rc.2"
+  }
+}

@@ -1,10 +1,11 @@
 {
   "name": "websocket-oplog",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A sample Express application to push MongoDB oplog events via Websockets to an Angular page.",
   "main": "oplog.js",
   "scripts": {
-    "start": "node --harmony oplog",
+    "start": "node oplog",
+    "harmony": "node --harmony oplog",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

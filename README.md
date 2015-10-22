@@ -1,7 +1,7 @@
 # websocket-oplog
 A sample Express application to push MongoDB oplog events via Websockets to an Angular page.
 
-version: 0.0.2
+version: 0.0.3
 
 ## Introduction
 This is a demo of using Mongo's oplog to notify web clients via Websockets about changes in the database.

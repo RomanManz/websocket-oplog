@@ -8,7 +8,7 @@ var mongoose = require('mongoose'),
 
 function get_latest(db) {
 	return new Promise(function(resolve, reject) {
-		db.find({}, { sort: { $natural: -1 } }).toArray(function(err, docs) {
+		db.find({}, { sort: { $natural: -1 }, limit: 1 }).toArray(function(err, docs) {
 			if( err ) return reject(err);
 			if( ! docs.length ) return reject(new Error('no oplog docs returned!'));
 			resolve(docs[0].ts);
